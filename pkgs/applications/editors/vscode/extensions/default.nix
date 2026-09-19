@@ -4447,6 +4447,23 @@ let
 
       sourcery.sourcery = callPackage ./sourcery.sourcery { };
 
+      spgoding.datapack-language-server = buildVscodeMarketplaceExtension {
+        mktplcRef = {
+          name = "datapack-language-server";
+          publisher = "SPGoding";
+          version = "4.13.0";
+          hash = "sha256-dPA6COWRTBjWaW3xz0UBdZywyXVxtmE37NVsrKcrjKE=";
+        };
+        meta = {
+          changelog = "https://marketplace.visualstudio.com/items/SPGoding.datapack-language-server/changelog";
+          description = "VSCode extension adding Minecraft data pack language support";
+          downloadPage = "https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server";
+          homepage = "https://github.com/SpyglassMC/Spyglass";
+          license = lib.licenses.mit;
+          maintainers = [ ];
+        };
+      };
+
       spywhere.guides = buildVscodeMarketplaceExtension {
         mktplcRef = {
           name = "guides";
